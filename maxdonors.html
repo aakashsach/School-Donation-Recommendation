@@ -1,0 +1,32 @@
+<HTML>
+   <BODY bgcolor="white">
+      <style>
+         table, th, td {
+         padding: 10px;
+         border: 1px solid black; 
+         border-collapse: collapse;
+         }
+      </style>
+      <!--List 25 words-->
+      <table>
+         <tr>
+            <th>DonorId</th>
+            <th>Donation Amount</th>
+            <th>Donations Made</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+         </tr>
+         {% for row in maxdonor %}
+         <tr>
+            <td>{{row.0}}</td>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.3}}</td>
+            <td>{{row.4}}</td>
+            <td>{{row.5}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+   </BODY>
+</HTML>

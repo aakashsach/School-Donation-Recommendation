@@ -1,0 +1,108 @@
+<html>
+   <title>Homepage</title>
+   <style>
+      body {
+      padding: 10px;
+      border: 1px solid black; 
+      border-collapse: collapse;
+      }
+   </style>
+   <body bgcolor="white">
+      <!-- Publish wordcloud -->
+      <form method="POST" action="{{url_for('search')}}">
+         <center>
+            <hr>
+            <center>
+               <h1>School Donation Recommendation System</h1>
+            </center>
+            <hr>
+            <select name="category">
+               <option value="Art Supplies">Art Supplies</option>
+               <option value="Books">Books</option>
+               <option value="Classroom Basics">Classroom Basics</option>
+               <option value="Computers & Tablets">Computers & Tablets</option>
+               <option value="Educational Kits & Games">Educational Kits & Games</option>
+               <option value="Flexible Seating">Flexible Seating</option>
+               <option value="Food, Clothing & Hygiene">Food, Clothing & Hygiene</option>
+               <option value="Instructional Technology">Instructional Technology</option>
+               <option value="Lab Equipment">Lab Equipment</option>
+               <option value="Musical Instruments">Musical Instruments</option>
+               <option value="Others">Others</option>
+               <option value="Reading Nooks, Desks & Storage">Reading Nooks, Desks & Storage</option>
+               <option value="Sports & Exercise Equipment</">Sports & Exercise Equipment</option>
+               <option value="Supplies">Supplies</option>
+               <option value="Technology">Technology</option>
+               <option value="Trips">Trips</option>
+               <option value="Visitors">Visitors</option>
+            </select>
+            <br>
+            <button name="Generate WordCloud" type="submit">Generate WordCloud</button><br>
+         </center>
+      </form>
+      <!--Display Donors with maxmum donations and their location-->
+      <div id="maxdonors">
+      <form method="POST" action="{{url_for('donors')}}">
+         <center>
+            <select name="category">
+               <option value="Art Supplies">Art Supplies</option>
+               <option value="Books">Books</option>
+               <option value="Classroom Basics">Classroom Basics</option>
+               <option value="Computers & Tablets">Computers & Tablets</option>
+               <option value="Educational Kits & Games">Educational Kits & Games</option>
+               <option value="Flexible Seating">Flexible Seating</option>
+               <option value="Food, Clothing & Hygiene">Food, Clothing & Hygiene</option>
+               <option value="Instructional Technology">Instructional Technology</option>
+               <option value="Lab Equipment">Lab Equipment</option>
+               <option value="Musical Instruments">Musical Instruments</option>
+               <option value="Others">Others</option>
+               <option value="Reading Nooks, Desks & Storage">Reading Nooks, Desks & Storage</option>
+               <option value="Sports & Exercise Equipment</">Sports & Exercise Equipment</option>
+               <option value="Supplies">Supplies</option>
+               <option value="Technology">Technology</option>
+               <option value="Trips">Trips</option>
+               <option value="Visitors">Visitors</option>
+            </select>
+            <br>
+            <button name="Generate Donor Report" type="submit">Generate Donor Report</button>
+         </center>
+      </form>
+      <!--Display donations for each resource category-->
+      <form method="POST" action="{{url_for('resource')}}">
+         <center>
+            <select name="category">
+               <option value="Art Supplies">Art Supplies</option>
+               <option value="Books">Books</option>
+               <option value="Classroom Basics">Classroom Basics</option>
+               <option value="Computers & Tablets">Computers & Tablets</option>
+               <option value="Educational Kits & Games">Educational Kits & Games</option>
+               <option value="Flexible Seating">Flexible Seating</option>
+               <option value="Food, Clothing & Hygiene">Food, Clothing & Hygiene</option>
+               <option value="Instructional Technology">Instructional Technology</option>
+               <option value="Lab Equipment">Lab Equipment</option>
+               <option value="Musical Instruments">Musical Instruments</option>
+               <option value="Others">Others</option>
+               <option value="Reading Nooks, Desks & Storage">Reading Nooks, Desks & Storage</option>
+               <option value="Sports & Exercise Equipment</">Sports & Exercise Equipment</option>
+               <option value="Supplies">Supplies</option>
+               <option value="Technology">Technology</option>
+               <option value="Trips">Trips</option>
+               <option value="Visitors">Visitors</option>
+            </select>
+            <br>
+            <button name="Max Resource" type="submit">Resource Utilization Report</button>
+         </center>
+      </form>
+      <!-- Insert New Fields -->
+      <form method="POST" action="{{url_for('insert')}}">
+         <center>
+            <h4>Draft New Essay:</h4>
+            Teacher Name <br><input type = "text" name= "tname" /> <br>
+            Project Name<br><input type = "text" name= "pname" /> <br>
+            Essay<br>
+            <textarea rows="4" cols="50" name="essay"></textarea>
+            <br>
+            <button name="Save" type="submit">Save</button>
+         </center>
+      </form>
+   </body>
+</html>

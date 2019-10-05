@@ -1,0 +1,24 @@
+<HTML>
+   <BODY bgcolor="white">
+      <style>
+         table, th, td {
+         padding: 10px;
+         border: 1px solid black; 
+         border-collapse: collapse;
+         }
+      </style>
+      <!--Display Donation Recieved for each category-->
+      <table>
+         <tr>
+            <th>Resource Category</th>
+            <th>Donation Received(%)</th>
+         </tr>
+         {% for row in maxdonation %}
+         <tr>
+            <td>{{row.0}}</td>
+            <td>{{row.1}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+   </BODY>
+</HTML>
